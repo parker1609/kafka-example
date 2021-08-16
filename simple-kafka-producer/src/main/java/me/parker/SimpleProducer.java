@@ -21,11 +21,23 @@ public class SimpleProducer {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
+        // value 레코드 전송
         String messageValue = "testMessage";
         ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, messageValue);
         producer.send(record);
-
         log.info("{}", record);
+
+        // key-value 레코드 전송
+        ProducerRecord<String, String> keyRecord = new ProducerRecord<>(TOPIC_NAME, "Pangyo", "23");
+        producer.send(keyRecord);
+        log.info("{}", keyRecord);
+
+        // 특정 파티션에 key-value 레코드 전송
+        ProducerRecord<String, String> exactPartitionRecord = new ProducerRecord<>(TOPIC_NAME, 0, "Park", "30");
+        producer.send(exactPartitionRecord);
+        log.info("{}", exactPartitionRecord);
+
+
         producer.flush();
         producer.close();
     }
