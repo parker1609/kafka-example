@@ -1,2 +1,3 @@
 rootProject.name = 'kafka-example'
+include 'simple-kafka-producer'
 
