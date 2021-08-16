@@ -1,0 +1,21 @@
+# IntelliJ
+out/
+.idea/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Gradle ###
+.gradle
+build/
+
+### Gradle Patch ###
+**/build/
+.gradle/

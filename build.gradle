@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        lombokVersion = '1.18.16'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'me.parker'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    group 'me.parker'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+
+    dependencies {
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+        testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+        testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+        testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.1'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
