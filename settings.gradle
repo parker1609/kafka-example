@@ -8,4 +8,5 @@ include 'spring-kafka-producer'
 include 'spring-kafka-template-producer'
 include 'spring-kafka-record-listener'
 include 'spring-kafka-batch-listener'
+include 'spring-kafka-commit-listener'
 
