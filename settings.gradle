@@ -3,4 +3,5 @@ include 'simple-kafka-producer'
 include 'simple-kafka-consumer'
 include 'simple-kafka-admin-client'
 include 'kafka-consumer-with-multi-worker-thread'
+include 'kafka-multi-consumer-thread'
 

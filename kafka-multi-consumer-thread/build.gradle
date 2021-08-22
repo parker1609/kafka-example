@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'me.parker'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.kafka:kafka-clients:2.5.0'
+}
+
+test {
+    useJUnitPlatform()
+}
