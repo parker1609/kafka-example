@@ -33,7 +33,13 @@ public class SimpleConsumer {
             for (ConsumerRecord<String, String> record : records) {
                 log.info("{}", record);
             }
-            consumer.commitSync();
+            consumer.commitAsync((offsets, exception) -> {
+                if (exception != null) {
+                    log.error("Commit failed", exception);
+                } else {
+                    log.info("Commit succeeded");
+                }
+            });
         }
     }
 }
