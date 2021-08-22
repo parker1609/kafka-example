@@ -1,4 +1,4 @@
-package me.parker;
+package me.parker.simplekafkaproducer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;

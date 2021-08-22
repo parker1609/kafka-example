@@ -1,4 +1,4 @@
-package me.parker;
+package me.parker.simplekafkaproducer;
 
 import org.apache.kafka.clients.producer.Partitioner;
 import org.apache.kafka.common.Cluster;

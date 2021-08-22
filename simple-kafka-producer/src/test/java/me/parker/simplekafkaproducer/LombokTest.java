@@ -1,4 +1,4 @@
-package me.parker;
+package me.parker.simplekafkaproducer;
 
 import lombok.Getter;
 import lombok.Setter;
