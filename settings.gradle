@@ -5,4 +5,5 @@ include 'simple-kafka-admin-client'
 include 'kafka-consumer-with-multi-worker-thread'
 include 'kafka-multi-consumer-thread'
 include 'spring-kafka-producer'
+include 'spring-kafka-template-producer'
 
